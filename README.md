@@ -8,4 +8,4 @@ Earthquakes impact thousands of people across the world each year, often causing
  
 This analysis focuses on predicting whether or not an earthquake that can be classified as "significant" will cause fatalities based on the following factors: month of year, hour of day, magnitude, Latitude, and Longitude.
 
-Various machine learning classification models were fit to train and test sets and then the predictive performance of each analyzed. Between Naïve Bayes, Gradient Boosting, and Random Forest, the Random Forest model performed the best.
+Various machine learning classification models were fit to train and test sets and then the predictive performance of each analyzed. Metrics used for performance evaluation were accuracy, f1 score, precision score, recall score, and AUC. Between Naïve Bayes, Gradient Boosting, and Random Forest, the Random Forest model had the best overall predictive performance, with an AUC score of 0.967.
