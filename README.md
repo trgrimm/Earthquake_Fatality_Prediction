@@ -6,9 +6,9 @@ Earthquakes impact thousands of people across the world each year, often causing
   - (2001-2020): Magnitude 7 or above, or which caused fatalities.
  
  
-This analysis focuses on predicting whether or not an earthquake that can be classified as "significant" will cause fatalities based on the following factors: month of year, hour of day, magnitude, Latitude, and Longitude.
+This analysis focuses on the following prediction question: Can we predict whether or not an earthquake that can be classified as "significant" will cause fatalities based on the factors of month of year, hour of day, magnitude, Latitude, and Longitude?
 
-Data included in the analysis is a subset of the datasets from the Wikipedia pages described above, including only the past 40 years of data (1981 - 2020).
+Data included in the analysis is a subset of the datasets from the Wikipedia pages described above, including only the past 40 years of data (1981 - 2020). Due to the nature of the dataset and the prediction question of interest, various Machine Learning classification methods were used. These models include Naïve Bayes, Gradient Boosting, and Random Forest.
 
 ## Best Model and Model Performance
 Various machine learning classification models were fit to train and test sets and then the predictive performance of each analyzed. Metrics that were used for performance evaluation are accuracy, f1 score, precision score, recall score, and AUC. In order to ensure optimal performance, optimal tuning parameters for the Gradient Boosting and Random Forest models were determined through the usage of scikit-learn's GridSearchCV function. These optimal tuning parameters were applied when fitting the models, and the models were analyzed after being fit and used for prediction on the testing dataset.
