@@ -19,7 +19,7 @@ Basic webscraping using the the `pandas.read_html` function was employed to scra
 import pandas as pd
 earthquakes = pd.read_csv('earthquake_data.csv')
 
-head(earthquakes)
+earthquakes.head()
 ```
 
 ## Best Model and Model Performance
