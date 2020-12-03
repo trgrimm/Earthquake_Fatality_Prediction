@@ -1,5 +1,6 @@
 # Earthquake Fatality Prediction
 
+## Introduction
 Earthquakes impact thousands of people across the world each year, often causing many fatalities. There are many sources across the internet that contain data for what are considered "significant" earthquakes. The data used for this analysis was webscraped from three separate Wikipedia pages documenting earthquakes that satisfy the following criteria:
 
   - (1900-2000): Magnitude 6 or above, "unless they are notable for some other reason".
