@@ -1,12 +1,13 @@
 # Earthquake Fatality Prediction
 
 ## Introduction
-Earthquakes impact thousands of people across the world each year, often causing many fatalities. There are many sources across the internet that contain data for what are considered "significant" earthquakes. The data used for this analysis was webscraped from three separate Wikipedia pages documenting earthquakes that satisfy the following criteria:
+Earthquakes impact thousands of people across the world each year, often causing many fatalities. As such, it is useful to explore some questions that may be answered through various machine learning models to help us better understand and predict the effects of earthquakes. Therefore, this analysis focuses on the following prediction question: 
+Can we predict whether or not an earthquake that can be classified as "significant" will cause fatalities based on the factors of month of year, hour of day, magnitude, latitude, and longitude?
+
+There are many sources across the internet that contain data for what are considered "significant" earthquakes. The data used for this analysis was webscraped from three separate Wikipedia pages documenting earthquakes that satisfy the following criteria:
 
   - (1900-2000): Magnitude 6 or above, "unless they are notable for some other reason".
   - (2001-2020): Magnitude 7 or above, or which caused fatalities.
- 
-This analysis focuses on the following prediction question: Can we predict whether or not an earthquake that can be classified as "significant" will cause fatalities based on the factors of month of year, hour of day, magnitude, latitude, and longitude?
 
 Data included in the analysis is a subset of the datasets from the Wikipedia pages described above, including only the past 40 years of data (1981 - 2020). Due to the nature of the dataset and the prediction question of interest, various Machine Learning classification methods were used. These models include Naïve Bayes, Gradient Boosting, and Random Forest. These models were chosen for their popularity and general predictive performance and so that multiple models could be compared in this situation.
 
