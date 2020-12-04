@@ -12,7 +12,7 @@ Data included in the analysis is a subset of the datasets from the Wikipedia pag
 
 ## Data Collection
 
-Basic webscraping using the the `pandas.read_html` function was employed to scrape the data from 3 Wikipedia webpages. The data obtained from each of these webpages came in the form of various tables, so I went through and selected the tables that contained the data I wanted. I then combined all of the tables I wanted into a single dataframe and performed further data cleaning and feature engineering to create a dataset that I could use in exploratory data analysis and prediction. This dataset can be found in the `earthquake_data.csv` file in the repository. Below is the first few rows of the table:
+Basic webscraping using the the `pandas.read_html` function was employed to scrape the data from three Wikipedia webpages. The data obtained from each of these webpages came in the form of various tables, so I went through and selected the tables that contained the data I wanted. I then combined all of the tables I wanted into a single dataframe and performed further data cleaning and feature engineering to create a dataset that I could use in exploratory data analysis and prediction. This dataset can be found in the `earthquake_data.csv` file in the repository. Below is the first few rows of the table:
 
 | index	| DateTime | Lat.	| Long. 	| Fatalities |	Magnitude |	Month |	Hour |	Fatalities_bool |
 | ----- | -------- | ---- | -------  | ---------- | ---------- | ----- | ---- | ---------------- |
@@ -23,20 +23,24 @@ Basic webscraping using the the `pandas.read_html` function was employed to scra
 |4	|1983-10-28 14:06:00	| 44.09 |	-113.8|	2	| 7.0 |	10 |	14 |	True |
 
 
-## Exploratory Data Analysis
+## Exploratory Data Analysis (EDA)
 
-Below is a map I created that shows a single point for each earthquake included in the `earthquake_data.csv` dataset. The map below shows which earthquakes caused fatalities and which earthquakes did not.
+Below is a map that I created which shows a single point for each earthquake included in the `earthquake_data.csv` dataset. The points on the map below show which earthquakes caused fatalities and which earthquakes did not.
 
 <img src="https://github.com/tgrimm14/Project_Stat426/blob/main/earthquakes_map.png" width="600" height="300">
 
-It turns out that the `earthquake_data.csv` dataset contains 575 eaarthquakes that caused fatalities and 196 earthquakes that did not cause fatalities. Below is a histogram that shows the distribution of magnitude across the earthquakes in the dataset.
+It turns out that the `earthquake_data.csv` dataset contains 575 earthquakes that caused fatalities and 196 earthquakes that did not cause fatalities. To get a better understanding of the data, below is a histogram that shows the distribution of magnitude across the earthquakes in the dataset. The average magnitude across the earthquakes in the datasaet is right around 6.5.
 
 <img src="https://github.com/tgrimm14/Project_Stat426/blob/main/earthquakes_by_magnitude.png" width="450" height="300">
 
+Further EDA with various maps, plots, and other summarized data can be found in the `Earthquake Models.ipynb` file, along with the step-by-step data collection, data cleaning, and feature engineering involved in the creation of the `earthquake_data.csv` dataset.
+
 ## Best Model and Model Performance
-Various machine learning classification models were fit to train and test sets and then the predictive performance of each model was analyzed. Metrics that were used for performance evaluation are accuracy, f1 score, precision score, recall score, and AUC. In order to ensure optimal performance, optimal tuning parameters for the Gradient Boosting and Random Forest models were determined through the usage of scikit-learn's GridSearchCV function. These optimal tuning parameters were applied when fitting the models, and the models were analyzed after being fit and used for prediction on the testing dataset.
+Various machine learning classification models were fit to train and test sets and then the predictive performance of each model was analyzed. Metrics that were used for performance evaluation are accuracy, f1 score, precision score, recall score, and AUC. In order to ensure optimal performance, optimal tuning parameters for the Gradient Boosting and Random Forest models were determined through the usage of scikit-learn's GridSearchCV function. These optimal tuning parameters were applied when fitting the models, and the models were analyzed after being fit and used for prediction on the test dataset.
 
 Between Naïve Bayes, Gradient Boosting, and a Random Forest model, the Random Forest Classifier model had the best overall predictive performance, with an AUC score of 0.968 and an f1 score of 0.937. The second best performing model was the Gradient Boosting Classifier, which had an AUC score of 0.962 and an f1 score of 0.928. The f1 score is a metric that is essentially computed as a weighted average of precision and recall, where precision measures the "true positive" rate and recall measures the ratio of "true positives" to the sum of "true positives" and "false negatives". These models had quite similar performance, but they were both far superior to the Naïve Bayes model. For the Random Forest model, out of 120 earthquakes that caused fatalities in the testing set, only 8 were misclassified as not causing fatalities. Out of the 35 earthquakes that didn't cause fatalities, only 7 were misclassified as causing fatalities. This is more impressive than the Naïve Bayes' 15 and 8 respective missclassifications and Gradient Boosting's 11 and 6.
 
 One useful piece of information we can obtain from the model is which features are the most important in predicting whether or not a "significant" earthquake will result in any fatalities. From the Random Forest Classifier model, we learn that the most important feature in this case is (unsurprisingly) Magnitude. The next most important features in order are Longitude, Latitude, Hour, and Month.
 
+## Conclusion
+Many machine learning classification models can successfully be used to predict whether or not a significant earthquake will cause fatalities, even when only a few pieces of data are known: magnitude, location (latitude/longitude), hour of day, and month of year. In the future, it would be interesting to apply machine learning models to predict fatalities resulting from other natural disasters. Additionally, models could be used to predict damages (measured in dollars or some other local currency) caused by a natural disaster.
