@@ -14,6 +14,16 @@ Data included in the analysis is a subset of the datasets from the Wikipedia pag
 
 Basic webscraping using the the `pandas.read_html` function was employed to scrape the data from 3 Wikipedia webpages. The data obtained from each of these webpages came in the form of various tables, so I went through and selected the tables that contained the data I wanted. I then combined all of the tables I wanted into a single dataframe and performed further data cleaning and feature engineering to create a dataset that I could use in exploratory data analysis and prediction. This dataset can be found in the `earthquake_data.csv` file in the repository.
 
+## Exploratory Data Analysis
+
+Below is a map I created that shows a single point for each earthquake included in the `earthquake_data.csv` dataset. The map below shows which earthquakes caused fatalities and which earthquakes did not.
+
+<img src="https://github.com/tgrimm14/Project_Stat426/blob/main/earthquakes_map.png" width="600" height="300">
+
+It turns out that the `earthquake_data.csv` dataset contains 575 eaarthquakes that caused fatalities and 196 earthquakes that did not cause fatalities. Below is a histogram that shows the distribution of magnitude across the earthquakes in the dataset.
+
+<img src="https://github.com/tgrimm14/Project_Stat426/blob/main/earthquakes_by_magnitude.png" width="450" height="300">
+
 ## Best Model and Model Performance
 Various machine learning classification models were fit to train and test sets and then the predictive performance of each model was analyzed. Metrics that were used for performance evaluation are accuracy, f1 score, precision score, recall score, and AUC. In order to ensure optimal performance, optimal tuning parameters for the Gradient Boosting and Random Forest models were determined through the usage of scikit-learn's GridSearchCV function. These optimal tuning parameters were applied when fitting the models, and the models were analyzed after being fit and used for prediction on the testing dataset.
 
