@@ -12,7 +12,16 @@ Data included in the analysis is a subset of the datasets from the Wikipedia pag
 
 ## Data Collection
 
-Basic webscraping using the the `pandas.read_html` function was employed to scrape the data from 3 Wikipedia webpages. The data obtained from each of these webpages came in the form of various tables, so I went through and selected the tables that contained the data I wanted. I then combined all of the tables I wanted into a single dataframe and performed further data cleaning and feature engineering to create a dataset that I could use in exploratory data analysis and prediction. This dataset can be found in the `earthquake_data.csv` file in the repository.
+Basic webscraping using the the `pandas.read_html` function was employed to scrape the data from 3 Wikipedia webpages. The data obtained from each of these webpages came in the form of various tables, so I went through and selected the tables that contained the data I wanted. I then combined all of the tables I wanted into a single dataframe and performed further data cleaning and feature engineering to create a dataset that I could use in exploratory data analysis and prediction. This dataset can be found in the `earthquake_data.csv` file in the repository. Below is the first few rows of the table:
+
+| index	| DateTime | Lat.	| Long. 	| Fatalities |	Magnitude |	Month |	Hour |	Fatalities_bool |
+| ----- | -------- | ---- | -------  | ---------- | ---------- | ----- | ---- | ---------------- |
+|0	|1981-01-19 15:11:00	| -4.576 | 139.232|	305 |	6.7	| 1 |	15 |	True |
+|1	|1981-01-23 21:13:00	| 30.93 |	101.1	| 150 |	6.8	| 1 |	21 |	True |
+|2	|1981-10-25 03:22:00	| 18.05 |	-102.08 |	3 |	7.3 |	10 |	3 |	True |
+|3	|1982-12-13 09:12:00	| 14.7 | 44.38|	2800 |	6.2 |	12 |	9	| True |
+|4	|1983-10-28 14:06:00	| 44.09 |	-113.8|	2	| 7.0 |	10 |	14 |	True |
+
 
 ## Exploratory Data Analysis
 
