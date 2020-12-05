@@ -1,7 +1,7 @@
 # Earthquake Fatality Prediction
 
 ## Introduction
-Earthquakes impact thousands of people across the world each year, often causing many fatalities. As such, it is useful to explore some questions that may be answered through various machine learning models to help us better understand and predict the effects of earthquakes. Therefore, this analysis focuses on the following prediction question: 
+Earthquakes impact thousands of people across the world each year, often causing many fatalities. As such, it is useful to explore some questions that may be answered through various machine learning models in order to better understand and predict the effects of earthquakes. Therefore, this analysis focuses on the following prediction question: 
 Can we predict whether or not an earthquake that can be classified as "significant" will cause fatalities based on the factors of month of year, hour of day, magnitude, latitude, and longitude?
 
 There are many sources across the internet that contain data for what are considered "significant" earthquakes. The data used for this analysis was webscraped from three separate Wikipedia pages documenting earthquakes that satisfy the following criteria:
