@@ -13,9 +13,9 @@ Data included in the analysis is a subset of the datasets from the Wikipedia pag
 
 ## Data Collection
 
-Basic webscraping using the the `pandas.read_html` function was employed to retrieve data from three Wikipedia webpages listed in the `Earthquake Models.ipynb` file. The data obtained from each of these webpages came in the form of various tables, so I went through and selected the tables that contained the data I wanted. I then combined all of the tables I wanted into a single dataframe and performed further data cleaning and feature engineering to create a dataset that I could use in exploratory data analysis and prediction. The data cleaning and basic feature engineering involved cleaning and removing text from the "Fatalities" column, converting dates and times into a usable format from which I could extract hour of day and month of year, and creating a "Fatalities_bool" column denoting whether or not the earthquake caused any fatalities.
+Basic webscraping using the the `pandas.read_html` function was employed to retrieve data from three Wikipedia webpages listed in the `Earthquake Models.ipynb` file. The data obtained from each of these webpages came in the form of various tables, so I went through and selected the tables that contained the data I wanted. I then combined all of the tables I wanted into a single dataframe and performed further data cleaning and feature engineering to create a dataset that I could use in exploratory data analysis and prediction.
 
-This cleaned dataset can be found in the `earthquake_data.csv` file in the repository. The first few rows of the table are below:
+The data cleaning and basic feature engineering involved cleaning and removing text from the "Fatalities" column, converting dates and times into a usable format from which I could extract hour of day and month of year, and creating a "Fatalities_bool" column denoting whether or not the earthquake caused any fatalities. This cleaned dataset can be found in the `earthquake_data.csv` file in the repository. The first few rows of the table are below:
 
 | index	| DateTime | Lat.	| Long. 	| Fatalities |	Magnitude |	Month |	Hour |	Fatalities_bool |
 | ----- | -------- | ---- | -------  | ---------- | ---------- | ----- | ---- | ---------------- |
